@@ -2,7 +2,7 @@
 
 use Spatie\LaravelSettings\Migrations\SettingsMigration;
 
-return new class() extends SettingsMigration
+return new class extends SettingsMigration
 {
     public function up(): void
     {
@@ -13,10 +13,10 @@ return new class() extends SettingsMigration
         $this->migrator->add('site.site_country', '');
         $this->migrator->add('site.site_currency', '$');
         $this->migrator->add('site.site_default_language', 'en');
-        $this->migrator->add('site.facebook_url', null);
-        $this->migrator->add('site.twitter_url', null);
+        $this->migrator->add('site.facebook_url');
+        $this->migrator->add('site.twitter_url');
         $this->migrator->add('site.github_url', 'https://github.com/liberusoftware/boilerplate-laravel');
-        $this->migrator->add('site.youtube_url', null);
+        $this->migrator->add('site.youtube_url');
         $this->migrator->add('site.footer_copyright', '© '.date('Y').' '.config('app.name', 'Liberu').'. All rights reserved.');
     }
 };

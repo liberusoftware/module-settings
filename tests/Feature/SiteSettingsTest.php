@@ -2,7 +2,7 @@
 
 use Liberu\Foundation\Settings\Settings\SiteSettings;
 
-it('round-trips typed site settings through the container', function () {
+it('round-trips typed site settings through the container', function (): void {
     $settings = app(SiteSettings::class);
     $settings->site_name = 'Acme';
     $settings->site_email = 'info@acme.test';
